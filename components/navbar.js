@@ -94,24 +94,27 @@ class CustomNavbar extends HTMLElement {
           }
         }
       </style>
-      <nav>
-        <a href="/" class="logo">Crescer Rápido</a>
-        <div class="nav-links">
-          <a href="/">Início</a>
-          <a href="instagram.html">Instagram</a>
-          <a href="tiktok.html">TikTok</a>
-          <a href="others.html">Outras Redes</a>
-          <a href="contato.html">Contato</a>
-        </div>
-<button class="menu-btn" aria-label="Menu">☰</button>
-        <div class="mobile-menu">
-          <a href="/">Início</a>
-          <a href="instagram.html">Instagram</a>
-          <a href="tiktok.html">TikTok</a>
-          <a href="others.html">Outras Redes</a>
-          <a href="contato.html">Contato</a>
-</div>
-      </nav>
+<nav>
+  <a href="/crseriea/index.html" class="logo">Crescer Rápido</a>
+
+  <div class="nav-links">
+    <a href="/crseriea/index.html">Início</a>
+    <a href="/crseriea/instagram.html">Instagram</a>
+    <a href="/crseriea/tiktok.html">TikTok</a>
+    <a href="/crseriea/others.html">Outras Redes</a>
+    <a href="/crseriea/contato.html">Contato</a>
+  </div>
+
+  <button class="menu-btn" aria-label="Menu">☰</button>
+
+  <div class="mobile-menu">
+    <a href="/crseriea/index.html">Início</a>
+    <a href="/crseriea/instagram.html">Instagram</a>
+    <a href="/crseriea/tiktok.html">TikTok</a>
+    <a href="/crseriea/others.html">Outras Redes</a>
+    <a href="/crseriea/contato.html">Contato</a>
+  </div>
+</nav>
 `;
 
     this.menuBtn = this.shadowRoot.querySelector('.menu-btn');
