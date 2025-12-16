@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok | Crescer Rápido</title>
+    <meta name="description" content="Compre seguidores, curtidas e visualizações para TikTok com segurança">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <promo-bar></promo-bar>
+    <custom-navbar></custom-navbar>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>TikTok – Escolha seu serviço</h1>
+            <h2>Selecione o serviço, ajuste a quantidade e adicione ao carrinho</h2>
+        </section>
+
+        <section class="services">
+            <!-- Seguidores -->
+            <div class="service-card">
+                <h3><i class="fas fa-user-plus"></i> Seguidores TikTok</h3>
+                <p>Quantidade mínima: 1.000 | Incremento: +100</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus" data-service="Seguidores TikTok">−</button>
+                    <input type="number" id="tiktokSeguidoresQuantity" value="1000" min="1000" step="100" class="quantity-input" readonly>
+                    <button class="quantity-btn plus" data-service="Seguidores TikTok">+</button>
+                </div>
+                <div class="price-summary">
+                    <p>Preço: R$ <span id="tiktokSeguidoresPrice">45,00</span></p>
+                    <p>(R$ 4,50 a cada 100)</p>
+                </div>
+                <button class="buy-btn" data-service="Seguidores TikTok" data-price-per="4.5" data-step="100">
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+
+            <!-- Curtidas -->
+            <div class="service-card">
+                <h3><i class="fas fa-heart"></i> Curtidas TikTok</h3>
+                <p>Quantidade mínima: 1.000 | Incremento: +500</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus" data-service="Curtidas TikTok">−</button>
+                    <input type="number" id="tiktokCurtidasQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
+                    <button class="quantity-btn plus" data-service="Curtidas TikTok">+</button>
+                </div>
+                <div class="price-summary">
+                    <p>Preço: R$ <span id="tiktokCurtidasPrice">10,00</span></p>
+                    <p>(R$ 5,00 a cada 500)</p>
+                </div>
+                <button class="buy-btn" data-service="Curtidas TikTok" data-price-per="5" data-step="500">
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+
+            <!-- Visualizações -->
+            <div class="service-card">
+                <h3><i class="fas fa-eye"></i> Visualizações TikTok</h3>
+                <p>Quantidade mínima: 1.000 | Incremento: +1.000</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus" data-service="Visualizações TikTok">−</button>
+                    <input type="number" id="tiktokVisualizacoesQuantity" value="1000" min="1000" step="1000" class="quantity-input" readonly>
+                    <button class="quantity-btn plus" data-service="Visualizações TikTok">+</button>
+                </div>
+                <div class="price-summary">
+                    <p>Preço: R$ <span id="tiktokVisualizacoesPrice">2,00</span></p>
+                    <p>(R$ 2,00 a cada 1.000)</p>
+                </div>
+                <button class="buy-btn" data-service="Visualizações TikTok" data-price-per="2" data-step="1000">
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+
+            <!-- Visualizações em LIVE -->
+            <div class="service-card">
+                <h3><i class="fas fa-video"></i> Visualizações em LIVE</h3>
+                <p>Duração mínima: 15 minutos | Incremento: +15 minutos</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus" data-service="Visualizações em LIVE">−</button>
+                    <input type="number" id="tiktokLiveQuantity" value="15" min="15" step="15" class="quantity-input" readonly>
+                    <button class="quantity-btn plus" data-service="Visualizações em LIVE">+</button>
+                </div>
+                <div class="price-summary">
+                    <p>Duração: <span id="tiktokLiveDuration">15 min</span></p>
+                    <p>Preço: R$ <span id="tiktokLivePrice">20,00</span></p>
+                </div>
+                <button class="buy-btn" data-service="Visualizações em LIVE" data-price-per="20" data-step="15">
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+
+            <!-- Salvamentos -->
+            <div class="service-card">
+                <h3><i class="fas fa-bookmark"></i> Salvamentos TikTok</h3>
+                <p>Quantidade mínima: 1.000 | Incremento: +500</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus" data-service="Salvamentos TikTok">−</button>
+                    <input type="number" id="tiktokSalvamentosQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
+                    <button class="quantity-btn plus" data-service="Salvamentos TikTok">+</button>
+                </div>
+                <div class="price-summary">
+                    <p>Preço: R$ <span id="tiktokSalvamentosPrice">10,00</span></p>
+                    <p>(R$ 5,00 a cada 500)</p>
+                </div>
+                <button class="buy-btn" data-service="Salvamentos TikTok" data-price-per="5" data-step="500">
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+<!-- Comentários Personalizados -->
+            <div class="service-card">
+                <h3><i class="fas fa-comment-dots"></i> Comentários TikTok Personalizados</h3>
+                <p>Digite um comentário por linha (mínimo 10)</p>
+                <textarea id="tiktokComentariosText" class="custom-comments" placeholder="Digite seus comentários, um por linha..." rows="5"></textarea>
+                <div class="price-summary">
+                    <p>Quantidade: <span id="tiktokComentariosCount">0</span> comentários</p>
+                    <p>Preço: R$ <span id="tiktokComentariosPersonalizadosPrice">0,00</span></p>
+                </div>
+                <button class="buy-btn" data-service="Comentários TikTok Personalizados" id="addTikTokComentariosBtn" disabled>
+                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                </button>
+            </div>
+</section>
+
+        <section class="legal-notice">
+            <h3>Aviso Legal</h3>
+            <p>Não nos responsabilizamos caso o perfil seja alterado ou conteúdo excluído após a compra.</p>
+            <p>Importante: Nunca solicitamos sua senha do TikTok.</p>
+        </section>
+    </main>
+    <section class="testimonials">
+        <h3>O que nossos clientes dizem - FeedBacks Anônimos</h3>
+<div class="testimonial-cards">
+            <div class="card">
+                <p>"Cumpre o que promete. Meu TikTok cresceu muito em poucos dias." ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="card">
+                <p>"Visualizações reais e engajamento autêntico. Valeu cada centavo!" ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="card">
+                <p>"Entrega rápida e segura. Minhas lives bombaram depois do serviço." ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+</section>
+
+    <!-- Shopping Cart -->
+<div id="shoppingCart">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+            Total: R$ <span id="cartTotal">0,00</span>
+        </div>
+        <div class="cart-actions">
+            <button class="cart-btn add-more">➕ Adicionar mais</button>
+            <button class="cart-btn whatsapp" id="finalizeOrder">✅ Finalizar pedido</button>
+        </div>
+    </div>
+
+    <button id="toggleCart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge">0</span>
+    </button>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/promobar.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .quantity-input {
+            cursor: default;
+            user-select: none;
+        }
+    </style>
+    <script>
+        // Shopping Cart Logic
+let cart = [];
+        const cartItemsEl = document.getElementById('cartItems');
+        const cartTotalEl = document.getElementById('cartTotal');
+        const cartBadge = document.querySelector('.cart-badge');
+        const shoppingCart = document.getElementById('shoppingCart');
+        const toggleCartBtn = document.getElementById('toggleCart');
+        const closeCartBtn = document.querySelector('.close-cart');
+        const addMoreBtn = document.querySelector('.cart-btn.add-more');
+        const finalizeOrderBtn = document.getElementById('finalizeOrder');
+
+        // Toggle Cart Visibility
+        toggleCartBtn.addEventListener('click', () => {
+            shoppingCart.style.display = shoppingCart.style.display === 'block' ? 'none' : 'block';
+        });
+
+        closeCartBtn.addEventListener('click', () => {
+            shoppingCart.style.display = 'none';
+        });
+
+        addMoreBtn.addEventListener('click', () => {
+            shoppingCart.style.display = 'none';
+        });
+
+        // Update Cart Display
+        function updateCart() {
+            cartItemsEl.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItemsEl.innerHTML = '<p style="text-align: center; padding: 1rem;">Seu carrinho está vazio</p>';
+                cartTotalEl.textContent = '0,00';
+                cartBadge.textContent = '0';
+                return;
+            }
+
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                total += item.price;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-service">${item.service}</div>
+                    <button class="remove-item" data-index="${index}">🗑</button>
+                    <div class="cart-item-quantity">Quantidade: ${item.quantity}</div>
+                    <div class="cart-item-price">R$ ${item.price.toFixed(2).replace('.', ',')}</div>
+                `;
+                
+                cartItemsEl.appendChild(cartItem);
+            });
+
+            // Add remove item event listeners
+            document.querySelectorAll('.remove-item').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.getAttribute('data-index'));
+                    cart.splice(index, 1);
+                    updateCart();
+                    showNotification('Item removido do carrinho');
+                });
+            });
+
+            cartTotalEl.textContent = total.toFixed(2).replace('.', ',');
+            cartBadge.textContent = cart.length;
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'cart-notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('fade-out');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+        // Service to input ID mapping
+        const serviceInputMap = {
+            'Seguidores TikTok': 'tiktokSeguidoresQuantity',
+            'Curtidas TikTok': 'tiktokCurtidasQuantity',
+            'Visualizações TikTok': 'tiktokVisualizacoesQuantity',
+            'Visualizações em LIVE': 'tiktokLiveQuantity',
+            'Salvamentos TikTok': 'tiktokSalvamentosQuantity',
+            'Comentários TikTok': 'tiktokComentariosQuantity',
+            'Comentários TikTok Personalizados': 'tiktokComentariosText'
+        };
+
+        // Service to price element ID mapping
+        const servicePriceMap = {
+            'Seguidores TikTok': 'tiktokSeguidoresPrice',
+            'Curtidas TikTok': 'tiktokCurtidasPrice',
+            'Visualizações TikTok': 'tiktokVisualizacoesPrice',
+            'Visualizações em LIVE': 'tiktokLivePrice',
+            'Salvamentos TikTok': 'tiktokSalvamentosPrice',
+            'Comentários TikTok': 'tiktokComentariosPrice',
+            'Comentários TikTok Personalizados': 'tiktokComentariosPersonalizadosPrice'
+        };
+// Quantity controls
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                const input = document.getElementById(serviceInputMap[service]);
+                const priceEl = document.getElementById(servicePriceMap[service]);
+                const isPlus = this.classList.contains('plus');
+                
+                let newValue = parseInt(input.value) + (isPlus ? parseInt(input.step) : -parseInt(input.step));
+                newValue = Math.max(newValue, parseInt(input.min));
+                
+                // Special case for LIVE duration
+                if (service === 'Visualizações em LIVE') {
+                    document.getElementById('tiktokLiveDuration').textContent = `${newValue} min`;
+                }
+                
+                // Calculate price
+                const buyBtn = document.querySelector(`.buy-btn[data-service="${service}"]`);
+                const pricePer = parseFloat(buyBtn.getAttribute('data-price-per'));
+                const step = parseInt(buyBtn.getAttribute('data-step'));
+                const price = (newValue / step) * pricePer;
+                
+                // Update UI
+                input.value = newValue;
+                priceEl.textContent = price.toFixed(2).replace('.', ',');
+            });
+        });
+        // Comentários Personalizados logic
+        const tiktokComentariosText = document.getElementById('tiktokComentariosText');
+        const tiktokComentariosCount = document.getElementById('tiktokComentariosCount');
+        const tiktokComentariosPrice = document.getElementById('tiktokComentariosPersonalizadosPrice');
+        const addTikTokComentariosBtn = document.getElementById('addTikTokComentariosBtn');
+
+        tiktokComentariosText.addEventListener('input', function() {
+            const lines = this.value.split('\n').filter(line => line.trim() !== '');
+            const count = lines.length;
+            
+            tiktokComentariosCount.textContent = count;
+            
+            // Validation message
+            const validationMsg = document.getElementById('tiktokComentariosValidation') || 
+                document.createElement('div');
+            validationMsg.id = 'tiktokComentariosValidation';
+            validationMsg.style.color = 'red';
+            validationMsg.style.fontSize = '0.8rem';
+            validationMsg.style.marginTop = '0.5rem';
+            
+            if (count < 10) {
+                validationMsg.textContent = 'Escreva no mínimo 10 comentários';
+                if (!document.getElementById('tiktokComentariosValidation')) {
+                    tiktokComentariosText.parentNode.insertBefore(validationMsg, tiktokComentariosText.nextSibling);
+                }
+                addTikTokComentariosBtn.disabled = true;
+            } else {
+                if (document.getElementById('tiktokComentariosValidation')) {
+                    validationMsg.remove();
+                }
+                addTikTokComentariosBtn.disabled = false;
+            }
+            
+            // Calculate price (R$35 for 10 comments)
+            const price = (count * 35) / 10;
+            
+            tiktokComentariosPrice.textContent = price.toFixed(2).replace('.', ',');
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                let quantity, price, comments = '';
+                
+                if (service === 'Comentários TikTok Personalizados') {
+                    const text = document.getElementById('tiktokComentariosText').value;
+                    const lines = text.split('\n').filter(line => line.trim() !== '');
+                    quantity = lines.length;
+                    comments = lines.map(line => `- ${line}`).join('\n');
+                    price = (quantity * 35) / 10;
+                } else {
+                    const inputId = serviceInputMap[service];
+                    quantity = parseInt(document.getElementById(inputId).value);
+                    const pricePer = parseFloat(this.getAttribute('data-price-per'));
+                    const step = parseInt(this.getAttribute('data-step'));
+                    price = (quantity / step) * pricePer;
+                }
+                
+                cart.push({
+                    service,
+                    quantity,
+                    price,
+                    comments: comments || undefined
+                });
+                
+                updateCart();
+                showNotification('Adicionado ao carrinho com sucesso!');
+                shoppingCart.style.display = 'block';
+            });
+        });
+// Finalize order
+        finalizeOrderBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                showNotification('Adicione itens ao carrinho primeiro');
+                return;
+            }
+
+            let message = 'Pedido TikTok – Crescer Rápido%0A%0A';
+            cart.forEach(item => {
+                message += `• Serviço: ${item.service}%0A`;
+                message += `  Quantidade: ${item.quantity}${item.service.includes('LIVE') ? ' min' : ''}%0A`;
+                if (item.comments) {
+                    message += `  Comentários:%0A${item.comments.split('\n').map(line => `  - ${line}`).join('%0A')}%0A`;
+                }
+                message += `  Valor: R$ ${item.price.toFixed(2).replace('.', ',')}%0A%0A`;
+            });
+const total = cart.reduce((sum, item) => sum + item.price, 0);
+            message += `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+            
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        });
+
+        // Initialize cart
+        updateCart();
+    </script>
+</body>
+</html>
