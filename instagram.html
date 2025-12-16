@@ -399,7 +399,7 @@ const input = document.getElementById(serviceInputMap[service]);
             const total = cart.reduce((sum, item) => sum + item.price, 0);
             message += `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
             
-            window.open(`https://wa.me/?text=${message}`, '_blank');
+            window.open(`https://wa.me/5511922257294?text=${message}`, '_blank');
         });
         // Initialize cart and set up Comentários Positivos price display
         document.getElementById('comentariosPositivosPrice').textContent = '15,00';
