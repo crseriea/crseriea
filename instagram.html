@@ -254,49 +254,52 @@
         }
 
         // Add to cart functionality
-        document.querySelectorAll('.buy-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const service = this.getAttribute('data-service');
-                let quantity, price, comments = '';
-                if (service === 'Comentários Personalizados') {
-                    const text = document.getElementById('comentariosText').value;
-                    const lines = text.split('\n').filter(line => line.trim() !== '');
-                    quantity = lines.length;
-                    comments = lines.map(line => `- ${line}`).join('\n');
-                    
-                    // Calculate price (every 5 comments = R$20)
-                    const blocks = Math.ceil(Math.max(quantity, 5) / 5);
-                    price = blocks * 20;
-                } else if (service === 'Comentários Positivos') {
-                    quantity = parseInt(document.getElementById('comentariosPositivosQuantity').value);
-                    const pricePer = parseFloat(this.getAttribute('data-price-per'));
-                    const step = parseInt(this.getAttribute('data-step'));
-                    price = (quantity / step) * pricePer;
-} else {
-                let inputId;
-                if (service === 'Comentários Positivos') {
-                    inputId = 'comentariosPositivosQuantity';
-                } else {
-                    inputId = `${service.toLowerCase().replace(' ', '').replace('ã', 'a')}Quantity`;
-                }
-quantity = parseInt(document.getElementById(inputId).value);
-                    const pricePer = parseFloat(this.getAttribute('data-price-per'));
-                    const step = parseInt(this.getAttribute('data-step'));
-                    price = (quantity / step) * pricePer;
-                }
-                
-                cart.push({
-                    service,
-                    quantity,
-                    price,
-                    comments: comments || undefined
-                });
-                
-                updateCart();
-                showNotification('Adicionado ao carrinho com sucesso!');
-                shoppingCart.style.display = 'block';
-            });
-        });
+document.querySelectorAll('.buy-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const service = this.getAttribute('data-service');
+        let quantity, price, comments = '';
+
+        if (service === 'Seguidores (Teste)') {
+            quantity = 100;
+            price = 10;
+        }
+
+        else if (service === 'Visualizações') {
+            quantity = parseInt(document.getElementById('visualizacoesQuantity').value);
+            price = (quantity / 1000) * 2;
+        }
+
+        else if (service === 'Comentários Personalizados') {
+            const text = document.getElementById('comentariosText').value;
+            const lines = text.split('\n').filter(line => line.trim() !== '');
+            quantity = lines.length;
+            comments = lines.map(line => `- ${line}`).join('\n');
+
+            const blocks = Math.ceil(Math.max(quantity, 5) / 5);
+            price = blocks * 20;
+        }
+
+        else if (service === 'Comentários Positivos') {
+            quantity = parseInt(document.getElementById('comentariosPositivosQuantity').value);
+            const pricePer = parseFloat(this.getAttribute('data-price-per'));
+            const step = parseInt(this.getAttribute('data-step'));
+            price = (quantity / step) * pricePer;
+        }
+
+        else {
+            const inputId = `${service.toLowerCase().replace(' ', '').replace('ã', 'a')}Quantity`;
+            quantity = parseInt(document.getElementById(inputId).value);
+            const pricePer = parseFloat(this.getAttribute('data-price-per'));
+            const step = parseInt(this.getAttribute('data-step'));
+            price = (quantity / step) * pricePer;
+        }
+
+        cart.push({ service, quantity, price, comments: comments || undefined });
+        updateCart();
+        showNotification('Adicionado ao carrinho com sucesso!');
+        shoppingCart.style.display = 'block';
+    });
+});
         // Quantity controls
         document.querySelectorAll('.quantity-btn').forEach(btn => {
             btn.addEventListener('click', function() {
