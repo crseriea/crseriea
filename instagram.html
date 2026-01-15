@@ -17,104 +17,225 @@
         <section class="hero">
             <h1>Instagram – Escolha seu serviço</h1>
             <h2>Selecione o serviço, ajuste a quantidade e adicione ao carrinho</h2>
+            
+            <!-- Category Navigation Buttons -->
+            <div class="category-buttons">
+                <button class="category-btn" data-target="mundial-services">
+                    <i class="fas fa-globe"></i> Serviços Mundiais
+                </button>
+                <button class="category-btn" data-target="brasileiro-services">
+                    <i class="fas fa-flag"></i> Serviços Brasileiros
+                </button>
+            </div>
         </section>
 
-        <section class="services">
-            <!-- Seguidores (Teste) -->
-            <div class="service-card">
-                <h3><i class="fas fa-users"></i> Seguidores (Teste)</h3>
-                <p>Serviço de teste - quantidade fixa</p>
-                <div class="fixed-quantity">
-                    <p>Quantidade: 100</p>
-                    <p>Preço: R$ 10,00</p>
+        <!-- Serviços Mundiais -->
+        <section id="mundial-services" class="services-section">
+            <h2 class="section-title">🌍 Serviços Mundiais</h2>
+            <div class="services">
+                <!-- Mundial: Seguidores (Teste) -->
+                <div class="service-card">
+                    <h3><i class="fas fa-users"></i> Seguidores (Teste)</h3>
+                    <p>Serviço de teste - quantidade fixa</p>
+                    <div class="fixed-quantity">
+                        <p>Quantidade: 100</p>
+                        <p>Preço: R$ 5,00</p>
+                    </div>
+                    <button class="buy-btn" data-service="Seguidores Mundial (Teste)" data-quantity="100" data-price="5">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <button class="buy-btn" data-service="Seguidores (Teste)" data-quantity="100" data-price="10">
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
-            </div>
 
-            <!-- Seguidores -->
-            <div class="service-card">
-                <h3><i class="fas fa-user-plus"></i> Seguidores</h3>
-                <p>Quantidade mínima: 1.000 | Incremento: +100</p>
-                <div class="quantity-selector">
-                    <button class="quantity-btn minus" data-service="Seguidores">−</button>
-                <input type="number" id="seguidoresQuantity" value="1000" min="1000" step="100" class="quantity-input" readonly>
-<button class="quantity-btn plus" data-service="Seguidores">+</button>
+                <!-- Mundial: Seguidores -->
+                <div class="service-card">
+                    <h3><i class="fas fa-user-plus"></i> Seguidores</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +100</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Seguidores Mundial">−</button>
+                        <input type="number" id="mundialSeguidoresQuantity" value="1000" min="1000" step="100" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Seguidores Mundial">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="mundialSeguidoresPrice">10,00</span></p>
+                        <p>(R$ 1,00 a cada 100)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Seguidores Mundial" data-price-per="1" data-step="100">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <div class="price-summary">
-                    <p>Preço: R$ <span id="seguidoresPrice">30,00</span></p>
-                    <p>(R$ 3,00 a cada 100)</p>
-                </div>
-                <button class="buy-btn" data-service="Seguidores" data-price-per="3" data-step="100">
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
-            </div>
 
-            <!-- Curtidas -->
-            <div class="service-card">
-                <h3><i class="fas fa-heart"></i> Curtidas</h3>
-                <p>Quantidade mínima: 1.000 | Incremento: +500</p>
-                <div class="quantity-selector">
-                    <button class="quantity-btn minus" data-service="Curtidas">−</button>
-                <input type="number" id="curtidasQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
-<button class="quantity-btn plus" data-service="Curtidas">+</button>
+                <!-- Mundial: Curtidas -->
+                <div class="service-card">
+                    <h3><i class="fas fa-heart"></i> Curtidas</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +500</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Curtidas Mundial">−</button>
+                        <input type="number" id="mundialCurtidasQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Curtidas Mundial">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="mundialCurtidasPrice">5,00</span></p>
+                        <p>(R$ 2,50 a cada 500)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Curtidas Mundial" data-price-per="2.5" data-step="500">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <div class="price-summary">
-                    <p>Preço: R$ <span id="curtidasPrice">10,00</span></p>
-                    <p>(R$ 5,00 a cada 500)</p>
-                </div>
-                <button class="buy-btn" data-service="Curtidas" data-price-per="5" data-step="500">
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
-            </div>
 
-            <!-- Visualizações -->
-            <div class="service-card">
-                <h3><i class="fas fa-eye"></i> Visualizações</h3>
-                <p>Quantidade mínima: 1.000 | Incremento: +1.000</p>
-                <div class="quantity-selector">
-                    <button class="quantity-btn minus" data-service="Visualizações">−</button>
-                <input type="number" id="visualizacoesQuantity" value="1000" min="1000" step="1000" class="quantity-input" readonly>
-<button class="quantity-btn plus" data-service="Visualizações">+</button>
+                <!-- Mundial: Visualizações -->
+                <div class="service-card">
+                    <h3><i class="fas fa-eye"></i> Visualizações</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +1.000</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Visualizações Mundial">−</button>
+                        <input type="number" id="mundialVisualizacoesQuantity" value="1000" min="1000" step="1000" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Visualizações Mundial">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="mundialVisualizacoesPrice">0,50</span></p>
+                        <p>(R$ 0,50 a cada 1.000)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Visualizações Mundial" data-price-per="0.5" data-step="1000">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <div class="price-summary">
-                    <p>Preço: R$ <span id="visualizacoesPrice">2,00</span></p>
-                    <p>(R$ 2,00 a cada 1.000)</p>
+
+                <!-- Mundial: Comentários Personalizados -->
+                <div class="service-card">
+                    <h3><i class="fas fa-comment-dots"></i> Comentários Personalizados</h3>
+                    <p>Digite um comentário por linha (mínimo 10)</p>
+                    <textarea id="mundialComentariosText" class="custom-comments" placeholder="Digite seus comentários, um por linha..." rows="5"></textarea>
+                    <div class="price-summary">
+                        <p>Quantidade: <span id="mundialComentariosCount">0</span></p>
+                        <p>Preço: R$ <span id="mundialComentariosPrice">0,00</span></p>
+                    </div>
+                    <button class="buy-btn" data-service="Comentários Personalizados Mundial" id="mundialAddComentariosBtn" disabled>
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <button class="buy-btn" data-service="Visualizações" data-price-per="2" data-step="1000">
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
+
+                <!-- Mundial: Visualizações em Stories -->
+                <div class="service-card">
+                    <h3><i class="fas fa-circle-notch"></i> Visualizações em Stories</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +500</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Visualizações Stories Mundial">−</button>
+                        <input type="number" id="mundialStoriesQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Visualizações Stories Mundial">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="mundialStoriesPrice">2,00</span></p>
+                        <p>(R$ 1,00 a cada 500)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Visualizações Stories Mundial" data-price-per="1" data-step="500">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
+                </div>
             </div>
-            <!-- Comentários Positivos -->
-            <div class="service-card">
-                <h3><i class="fas fa-comment"></i> Comentários Positivos</h3>
-                <p>Quantidade mínima: 5 | Incremento: +5</p>
-                <div class="quantity-selector">
-                    <button class="quantity-btn minus" data-service="Comentários Positivos">−</button>
-                    <input type="number" id="comentariosPositivosQuantity" value="5" min="5" step="5" class="quantity-input" readonly>
-                    <button class="quantity-btn plus" data-service="Comentários Positivos">+</button>
+        </section>
+
+        <!-- Serviços Brasileiros -->
+        <section id="brasileiro-services" class="services-section">
+            <h2 class="section-title">🇧🇷 Serviços Brasileiros</h2>
+            <div class="services">
+                <!-- Brasileiro: Seguidores (Teste) -->
+                <div class="service-card">
+                    <h3><i class="fas fa-users"></i> Seguidores (Teste)</h3>
+                    <p>Serviço de teste - quantidade fixa</p>
+                    <div class="fixed-quantity">
+                        <p>Quantidade: 100</p>
+                        <p>Preço: R$ 10,00</p>
+                    </div>
+                    <button class="buy-btn" data-service="Seguidores Brasileiro (Teste)" data-quantity="100" data-price="10">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <div class="price-summary">
-                    <p>Preço: R$ <span id="comentariosPositivosPrice">15,00</span></p>
-                    <p>(R$ 15,00 a cada 5)</p>
+
+                <!-- Brasileiro: Seguidores -->
+                <div class="service-card">
+                    <h3><i class="fas fa-user-plus"></i> Seguidores</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +100</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Seguidores Brasileiro">−</button>
+                        <input type="number" id="brasileiroSeguidoresQuantity" value="1000" min="1000" step="100" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Seguidores Brasileiro">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="brasileiroSeguidoresPrice">30,00</span></p>
+                        <p>(R$ 3,00 a cada 100)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Seguidores Brasileiro" data-price-per="3" data-step="100">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <button class="buy-btn" data-service="Comentários Positivos" data-price-per="15" data-step="5">
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
-            </div>
-<!-- Comentários Personalizados -->
-            <div class="service-card">
-                <h3><i class="fas fa-comment-dots"></i> Comentários Personalizados</h3>
-                <p>Digite um comentário por linha (mínimo 5)</p>
-                <textarea id="comentariosText" class="custom-comments" placeholder="Digite seus comentários, um por linha..." rows="5"></textarea>
-                <div class="price-summary">
-                    <p>Quantidade: <span id="comentariosCount">0</span></p>
-                    <p>Preço: R$ <span id="comentariosPrice">0,00</span></p>
+
+                <!-- Brasileiro: Curtidas -->
+                <div class="service-card">
+                    <h3><i class="fas fa-heart"></i> Curtidas</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +500</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Curtidas Brasileiro">−</button>
+                        <input type="number" id="brasileiroCurtidasQuantity" value="1000" min="1000" step="500" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Curtidas Brasileiro">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="brasileiroCurtidasPrice">10,00</span></p>
+                        <p>(R$ 5,00 a cada 500)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Curtidas Brasileiro" data-price-per="5" data-step="500">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
                 </div>
-                <button class="buy-btn" data-service="Comentários Personalizados" id="addComentariosBtn" disabled>
-                    <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-                </button>
+
+                <!-- Brasileiro: Visualizações -->
+                <div class="service-card">
+                    <h3><i class="fas fa-eye"></i> Visualizações</h3>
+                    <p>Quantidade mínima: 1.000 | Incremento: +1.000</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Visualizações Brasileiro">−</button>
+                        <input type="number" id="brasileiroVisualizacoesQuantity" value="1000" min="1000" step="1000" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Visualizações Brasileiro">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="brasileiroVisualizacoesPrice">2,00</span></p>
+                        <p>(R$ 2,00 a cada 1.000)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Visualizações Brasileiro" data-price-per="2" data-step="1000">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+
+                <!-- Brasileiro: Comentários Positivos -->
+                <div class="service-card">
+                    <h3><i class="fas fa-comment"></i> Comentários Positivos</h3>
+                    <p>Quantidade mínima: 5 | Incremento: +5</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" data-service="Comentários Positivos Brasileiro">−</button>
+                        <input type="number" id="brasileiroComentariosPositivosQuantity" value="5" min="5" step="5" class="quantity-input" readonly>
+                        <button class="quantity-btn plus" data-service="Comentários Positivos Brasileiro">+</button>
+                    </div>
+                    <div class="price-summary">
+                        <p>Preço: R$ <span id="brasileiroComentariosPositivosPrice">15,00</span></p>
+                        <p>(R$ 15,00 a cada 5)</p>
+                    </div>
+                    <button class="buy-btn" data-service="Comentários Positivos Brasileiro" data-price-per="15" data-step="5">
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
+                </div>
+
+                <!-- Brasileiro: Comentários Personalizados -->
+                <div class="service-card">
+                    <h3><i class="fas fa-comment-dots"></i> Comentários Personalizados</h3>
+                    <p>Digite um comentário por linha (mínimo 5)</p>
+                    <textarea id="brasileiroComentariosText" class="custom-comments" placeholder="Digite seus comentários, um por linha..." rows="5"></textarea>
+                    <div class="price-summary">
+                        <p>Quantidade: <span id="brasileiroComentariosCount">0</span></p>
+                        <p>Preço: R$ <span id="brasileiroComentariosPrice">0,00</span></p>
+                    </div>
+                    <button class="buy-btn" data-service="Comentários Personalizados Brasileiro" id="brasileiroAddComentariosBtn" disabled>
+                        <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -173,6 +294,17 @@
         }
     </style>
 <script>
+        // Category Navigation
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                const targetSection = document.getElementById(target);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
         // Shopping Cart Logic
         let cart = [];
         const cartItemsEl = document.getElementById('cartItems');
@@ -259,39 +391,53 @@ document.querySelectorAll('.buy-btn').forEach(btn => {
         const service = this.getAttribute('data-service');
         let quantity, price, comments = '';
 
-        if (service === 'Seguidores (Teste)') {
+        // Serviços de teste (fixos)
+        if (service === 'Seguidores Mundial (Teste)') {
+            quantity = 100;
+            price = 5;
+        }
+        else if (service === 'Seguidores Brasileiro (Teste)') {
             quantity = 100;
             price = 10;
         }
-
-        else if (service === 'Visualizações') {
-            quantity = parseInt(document.getElementById('visualizacoesQuantity').value);
-            price = (quantity / 1000) * 2;
-        }
-
-        else if (service === 'Comentários Personalizados') {
-            const text = document.getElementById('comentariosText').value;
+        // Comentários Personalizados Mundial
+        else if (service === 'Comentários Personalizados Mundial') {
+            const text = document.getElementById('mundialComentariosText').value;
             const lines = text.split('\n').filter(line => line.trim() !== '');
             quantity = lines.length;
             comments = lines.map(line => `- ${line}`).join('\n');
-
+            const blocks = Math.ceil(Math.max(quantity, 10) / 10);
+            price = blocks * 5;
+        }
+        // Comentários Personalizados Brasileiro
+        else if (service === 'Comentários Personalizados Brasileiro') {
+            const text = document.getElementById('brasileiroComentariosText').value;
+            const lines = text.split('\n').filter(line => line.trim() !== '');
+            quantity = lines.length;
+            comments = lines.map(line => `- ${line}`).join('\n');
             const blocks = Math.ceil(Math.max(quantity, 5) / 5);
             price = blocks * 20;
         }
-
-        else if (service === 'Comentários Positivos') {
-            quantity = parseInt(document.getElementById('comentariosPositivosQuantity').value);
-            const pricePer = parseFloat(this.getAttribute('data-price-per'));
-            const step = parseInt(this.getAttribute('data-step'));
-            price = (quantity / step) * pricePer;
-        }
-
+        // Serviços com quantidade variável
         else {
-            const inputId = `${service.toLowerCase().replace(' ', '').replace('ã', 'a')}Quantity`;
-            quantity = parseInt(document.getElementById(inputId).value);
-            const pricePer = parseFloat(this.getAttribute('data-price-per'));
-            const step = parseInt(this.getAttribute('data-step'));
-            price = (quantity / step) * pricePer;
+            const serviceMap = {
+                'Seguidores Mundial': 'mundialSeguidoresQuantity',
+                'Curtidas Mundial': 'mundialCurtidasQuantity',
+                'Visualizações Mundial': 'mundialVisualizacoesQuantity',
+                'Visualizações Stories Mundial': 'mundialStoriesQuantity',
+                'Seguidores Brasileiro': 'brasileiroSeguidoresQuantity',
+                'Curtidas Brasileiro': 'brasileiroCurtidasQuantity',
+                'Visualizações Brasileiro': 'brasileiroVisualizacoesQuantity',
+                'Comentários Positivos Brasileiro': 'brasileiroComentariosPositivosQuantity'
+            };
+            
+            const inputId = serviceMap[service];
+            if (inputId) {
+                quantity = parseInt(document.getElementById(inputId).value);
+                const pricePer = parseFloat(this.getAttribute('data-price-per'));
+                const step = parseInt(this.getAttribute('data-step'));
+                price = (quantity / step) * pricePer;
+            }
         }
 
         cart.push({ service, quantity, price, comments: comments || undefined });
@@ -304,84 +450,117 @@ document.querySelectorAll('.buy-btn').forEach(btn => {
         document.querySelectorAll('.quantity-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const service = this.getAttribute('data-service');
-const serviceInputMap = {
-    'Seguidores': 'seguidoresQuantity',
-    'Curtidas': 'curtidasQuantity',
-    'Visualizações': 'visualizacoesQuantity',
-    'Comentários Positivos': 'comentariosPositivosQuantity'
-};
-const input = document.getElementById(serviceInputMap[service]);
+                const serviceInputMap = {
+                    'Seguidores Mundial': 'mundialSeguidoresQuantity',
+                    'Curtidas Mundial': 'mundialCurtidasQuantity',
+                    'Visualizações Mundial': 'mundialVisualizacoesQuantity',
+                    'Visualizações Stories Mundial': 'mundialStoriesQuantity',
+                    'Seguidores Brasileiro': 'brasileiroSeguidoresQuantity',
+                    'Curtidas Brasileiro': 'brasileiroCurtidasQuantity',
+                    'Visualizações Brasileiro': 'brasileiroVisualizacoesQuantity',
+                    'Comentários Positivos Brasileiro': 'brasileiroComentariosPositivosQuantity'
+                };
+                
+                const priceMap = {
+                    'Seguidores Mundial': { priceId: 'mundialSeguidoresPrice', pricePer: 1, step: 100 },
+                    'Curtidas Mundial': { priceId: 'mundialCurtidasPrice', pricePer: 2.5, step: 500 },
+                    'Visualizações Mundial': { priceId: 'mundialVisualizacoesPrice', pricePer: 0.5, step: 1000 },
+                    'Visualizações Stories Mundial': { priceId: 'mundialStoriesPrice', pricePer: 1, step: 500 },
+                    'Seguidores Brasileiro': { priceId: 'brasileiroSeguidoresPrice', pricePer: 3, step: 100 },
+                    'Curtidas Brasileiro': { priceId: 'brasileiroCurtidasPrice', pricePer: 5, step: 500 },
+                    'Visualizações Brasileiro': { priceId: 'brasileiroVisualizacoesPrice', pricePer: 2, step: 1000 },
+                    'Comentários Positivos Brasileiro': { priceId: 'brasileiroComentariosPositivosPrice', pricePer: 15, step: 5 }
+                };
 
+                const input = document.getElementById(serviceInputMap[service]);
                 const isPlus = this.classList.contains('plus');
+                const step = parseInt(input.step);
+                let newValue = parseInt(input.value) + (isPlus ? step : -step);
+                newValue = Math.max(newValue, parseInt(input.min));
                 
-                let newValue, price;
-                
-                if (service === 'Visualizações') {
-                    const currentValue = parseInt(input.value);
-                    newValue = isPlus ? currentValue + 1000 : Math.max(1000, currentValue - 1000);
-                    price = (newValue / 1000) * 2;
-                    document.getElementById('visualizacoesPrice').textContent = price.toFixed(2).replace('.', ',');
-                } 
-                else if (service === 'Comentários Positivos') {
-                    const currentValue = parseInt(input.value);
-                    newValue = isPlus ? currentValue + 5 : Math.max(5, currentValue - 5);
-                    price = (newValue / 5) * 15;
-                    document.getElementById('comentariosPositivosPrice').textContent = price.toFixed(2).replace('.', ',');
-                } 
-                else {
-                    const step = parseInt(input.step);
-                    newValue = parseInt(input.value) + (isPlus ? step : -step);
-                    newValue = Math.max(newValue, parseInt(input.min));
-                    const buyBtn = document.querySelector(`.buy-btn[data-service="${service}"]`);
-                    const pricePer = parseFloat(buyBtn.getAttribute('data-price-per'));
-                    price = (newValue / step) * pricePer;
-                    const priceElId = `${service.toLowerCase().replace(' ', '').replace('ã', 'a')}Price`;
-                    document.getElementById(priceElId).textContent = price.toFixed(2).replace('.', ',');
-                }
+                const priceInfo = priceMap[service];
+                const price = (newValue / priceInfo.step) * priceInfo.pricePer;
+                document.getElementById(priceInfo.priceId).textContent = price.toFixed(2).replace('.', ',');
                 
                 input.value = newValue;
             });
         });
-// Comentários Personalizados logic
-        const comentariosText = document.getElementById('comentariosText');
-        const comentariosCount = document.getElementById('comentariosCount');
-        const comentariosPrice = document.getElementById('comentariosPrice');
-        const addComentariosBtn = document.getElementById('addComentariosBtn');
+// Comentários Personalizados logic - Mundial
+        const mundialComentariosText = document.getElementById('mundialComentariosText');
+        const mundialComentariosCount = document.getElementById('mundialComentariosCount');
+        const mundialComentariosPrice = document.getElementById('mundialComentariosPrice');
+        const mundialAddComentariosBtn = document.getElementById('mundialAddComentariosBtn');
 
-        comentariosText.addEventListener('input', function() {
+        mundialComentariosText.addEventListener('input', function() {
             const lines = this.value.split('\n').filter(line => line.trim() !== '');
             const count = lines.length;
             
-            comentariosCount.textContent = count;
+            mundialComentariosCount.textContent = count;
             
-            // Validation message
-            const validationMsg = document.getElementById('comentariosValidation') || 
+            const validationMsg = document.getElementById('mundialComentariosValidation') || 
                 document.createElement('div');
-            validationMsg.id = 'comentariosValidation';
+            validationMsg.id = 'mundialComentariosValidation';
+            validationMsg.style.color = 'red';
+            validationMsg.style.fontSize = '0.8rem';
+            validationMsg.style.marginTop = '0.5rem';
+            
+            if (count < 10) {
+                validationMsg.textContent = 'Escreva no mínimo 10 comentários';
+                if (!document.getElementById('mundialComentariosValidation')) {
+                    mundialComentariosText.parentNode.insertBefore(validationMsg, mundialComentariosText.nextSibling);
+                }
+                mundialAddComentariosBtn.disabled = true;
+            } else {
+                if (document.getElementById('mundialComentariosValidation')) {
+                    validationMsg.remove();
+                }
+                mundialAddComentariosBtn.disabled = false;
+            }
+            
+            const blocks = Math.ceil(Math.max(count, 10) / 10);
+            const price = blocks * 5;
+            
+            mundialComentariosPrice.textContent = price.toFixed(2).replace('.', ',');
+        });
+
+        // Comentários Personalizados logic - Brasileiro
+        const brasileiroComentariosText = document.getElementById('brasileiroComentariosText');
+        const brasileiroComentariosCount = document.getElementById('brasileiroComentariosCount');
+        const brasileiroComentariosPrice = document.getElementById('brasileiroComentariosPrice');
+        const brasileiroAddComentariosBtn = document.getElementById('brasileiroAddComentariosBtn');
+
+        brasileiroComentariosText.addEventListener('input', function() {
+            const lines = this.value.split('\n').filter(line => line.trim() !== '');
+            const count = lines.length;
+            
+            brasileiroComentariosCount.textContent = count;
+            
+            const validationMsg = document.getElementById('brasileiroComentariosValidation') || 
+                document.createElement('div');
+            validationMsg.id = 'brasileiroComentariosValidation';
             validationMsg.style.color = 'red';
             validationMsg.style.fontSize = '0.8rem';
             validationMsg.style.marginTop = '0.5rem';
             
             if (count < 5) {
                 validationMsg.textContent = 'Escreva no mínimo 5 comentários';
-                if (!document.getElementById('comentariosValidation')) {
-                    comentariosText.parentNode.insertBefore(validationMsg, comentariosText.nextSibling);
+                if (!document.getElementById('brasileiroComentariosValidation')) {
+                    brasileiroComentariosText.parentNode.insertBefore(validationMsg, brasileiroComentariosText.nextSibling);
                 }
-                addComentariosBtn.disabled = true;
+                brasileiroAddComentariosBtn.disabled = true;
             } else {
-                if (document.getElementById('comentariosValidation')) {
+                if (document.getElementById('brasileiroComentariosValidation')) {
                     validationMsg.remove();
                 }
-                addComentariosBtn.disabled = false;
+                brasileiroAddComentariosBtn.disabled = false;
             }
             
-            // Calculate price (every 5 comments = R$20)
             const blocks = Math.ceil(Math.max(count, 5) / 5);
             const price = blocks * 20;
             
-            comentariosPrice.textContent = price.toFixed(2).replace('.', ',');
+            brasileiroComentariosPrice.textContent = price.toFixed(2).replace('.', ',');
         });
-// Finalize order
+        // Finalize order
         finalizeOrderBtn.addEventListener('click', () => {
             if (cart.length === 0) {
                 showNotification('Adicione itens ao carrinho primeiro');
@@ -404,8 +583,8 @@ const input = document.getElementById(serviceInputMap[service]);
             
             window.open(`https://wa.me/5511922257294?text=${message}`, '_blank');
         });
-        // Initialize cart and set up Comentários Positivos price display
-        document.getElementById('comentariosPositivosPrice').textContent = '15,00';
+        
+        // Initialize
         updateCart();
 </script>
 </body>
